@@ -961,3 +961,78 @@ footer a:hover {
         gap: 15px;
     }
 }
+
+/* =========================================
+   CORRECCIONES MÓVILES (Ansacar Mobile Fix)
+   Pega esto al final de tu style.css
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. ARREGLO DEL HERO (PORTADA) */
+    .hero-pro {
+        height: auto; /* IMPORTANTE: Deja que la altura crezca según el contenido */
+        min-height: 100vh; /* Al menos ocupará toda la pantalla, pero puede crecer más */
+        padding-top: 100px; /* Espacio para que no se monte con el menú */
+        padding-bottom: 60px; /* Espacio abajo para respirar */
+        background-attachment: scroll; /* Evita saltos raros en móviles al hacer scroll */
+    }
+
+    .hero-content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px; /* Menos espacio entre texto y formulario */
+    }
+
+    /* Texto más pequeño y manejable */
+    .hero-text h1 {
+        font-size: 2.2rem; /* Bajamos de 2.8rem a 2.2rem */
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    /* Formulario flotante: quitar la sombra exagerada en móvil */
+    .hero-card {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Sombra más suave */
+        padding: 25px; /* Menos relleno interno */
+    }
+
+    /* 2. ARREGLO DE ESTADÍSTICAS (+10 años, etc) */
+    .stats-row {
+        flex-direction: row; /* Mantener en fila */
+        flex-wrap: wrap; /* Permitir que bajen si no caben */
+        gap: 20px;
+        justify-content: center;
+        border-top: none; /* Quitamos la línea en móvil si molesta, o la dejamos */
+    }
+
+    .stat-item {
+        min-width: 80px; /* Ancho mínimo para que no se aplasten */
+    }
+
+    /* 3. ARREGLO GENERAL DE SECCIONES (Quitar aire) */
+    .section {
+        padding: 50px 0; /* Bajamos de 80px a 50px */
+    }
+
+    .page-header h1 {
+        font-size: 2rem; /* Títulos de páginas interiores más pequeños */
+    }
+
+    /* 4. MENÚ DE NAVEGACIÓN */
+    /* Aseguramos que el menú tenga un fondo sólido y legible */
+    .nav-links {
+        background-color: #001a33; /* Azul muy oscuro sólido */
+        padding-top: 80px; /* Espacio para no tapar el botón de cerrar */
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem; /* Un poco más elegante, no tan gigante */
+    }
+}
