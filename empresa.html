@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Conozca Transportes Ansacar S.L., empresa fundada en 2013 en Esplugues de Llobregat. Expertos en logística y transporte con flota propia.">
+
     <title>Sobre Nosotros | Transportes Ansacar S.L.</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="header-pro">
     <div class="container nav-flex">
-        <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">TRANSPORTES ANSACAR</a></div>
+        <div class="logo">
+            <a href="index.html">TRANSPORTES ANSACAR</a>
+        </div>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links nav-menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="empresa.html" class="active">Empresa</a></li>
@@ -24,37 +38,42 @@
     </div>
 </header>
 
-<section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-    <h1>Sobre Ansacar S.L.</h1>
+<section class="page-header about-hero">
+    <h1 data-aos="fade-down" data-aos-duration="1000">Sobre Ansacar S.L.</h1>
 </section>
 
 <section class="section container">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2 style="margin-bottom: 30px; font-size: 2rem; color: var(--primary-color);">Trayectoria y Compromiso</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
+
+    <div class="about-intro" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Trayectoria y Compromiso</h2>
+        <p>
             Fundada el <strong>26 de julio de 2013</strong>, Transportes Ansacar S.L. nació con una visión clara: profesionalizar el transporte terrestre ofreciendo la cercanía que las grandes multinacionales a menudo olvidan.
         </p>
-        <p style="font-size: 1.1rem; margin-bottom: 40px;">
+        <p class="last-p">
             Con sede estratégica en <strong>Esplugues de Llobregat (Barcelona)</strong>, hemos crecido de forma sostenible, invirtiendo en flota moderna y en un equipo humano capaz de resolver cualquier reto logístico.
         </p>
     </div>
 
-    <div class="services-grid" style="margin-top: 60px;">
-        <div class="card">
-            <i class="fa-solid fa-certificate fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
+    <div class="services-grid about-grid-margin">
+
+        <div class="card" data-aos="fade-up" data-aos-duration="800">
+            <i class="fa-solid fa-certificate fa-3x card-icon"></i>
             <h3>Calidad Certificada</h3>
             <p>Operamos bajo estrictos estándares de calidad y seguridad en todas nuestras rutas.</p>
         </div>
-        <div class="card">
-            <i class="fa-solid fa-users fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            <i class="fa-solid fa-users fa-3x card-icon"></i>
             <h3>Equipo Humano</h3>
             <p>Nuestro mayor activo. Conductores experimentados y gestores de tráfico dedicados a su mercancía.</p>
         </div>
-        <div class="card">
-            <i class="fa-solid fa-file-contract fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+            <i class="fa-solid fa-file-contract fa-3x card-icon"></i>
             <h3>Transparencia</h3>
             <p>Inscritos en el Registro Mercantil de Barcelona. NIF B66095993.</p>
         </div>
+
     </div>
 </section>
 
@@ -62,6 +81,7 @@
     <div class="container footer-grid">
         <div class="footer-info">
             <h3>Transportes Ansacar S.L.</h3>
+            <p>Su socio de confianza desde 2013.</p>
         </div>
         <div class="footer-legal">
             <p><a href="legal.html">Aviso Legal</a> | <a href="contacto.html">Contacto</a></p>
@@ -69,5 +89,9 @@
         </div>
     </div>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

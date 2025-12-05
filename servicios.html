@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Servicios de transporte terrestre de mercancías, grupajes (LTL), cargas completas (FTL) y mudanzas corporativas en Barcelona.">
+
     <title>Servicios | Transportes Ansacar S.L.</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="header-pro">
     <div class="container nav-flex">
-        <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">TRANSPORTES ANSACAR</a></div>
+        <div class="logo">
+            <a href="index.html">TRANSPORTES ANSACAR</a>
+        </div>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links nav-menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html" class="active">Servicios</a></li>
                 <li><a href="empresa.html">Empresa</a></li>
@@ -24,39 +39,49 @@
     </div>
 </header>
 
-<section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-    <h1>Nuestros Servicios</h1>
+<section class="page-header services-hero">
+    <h1 data-aos="fade-down" data-aos-duration="1000">Nuestros Servicios</h1>
 </section>
 
 <section class="section">
     <div class="container">
 
-        <div style="display: flex; flex-wrap: wrap; gap: 50px; margin-bottom: 80px; align-items: center;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Transporte Terrestre" style="width: 100%; border-radius: 8px; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+        <div class="service-row">
+            <div class="service-media" data-aos="fade-right" data-aos-duration="1000">
+                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                     alt="Transporte Terrestre de Mercancías">
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <h2 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 20px;">Transporte de Mercancías</h2>
-                <p style="margin-bottom: 15px;">Como especialistas certificados (CNAE 4941), ofrecemos soluciones de transporte terrestre flexibles y seguras. Adaptamos nuestra flota al tipo de carga que su negocio necesita mover.</p>
-                <ul class="fa-ul" style="margin-left: 20px; line-height: 2;">
-                    <li><span class="fa-li"><i class="fa-solid fa-check" style="color:var(--secondary-color);"></i></span>Cargas completas (FTL) y grupajes (LTL).</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check" style="color:var(--secondary-color);"></i></span>Transporte Nacional e Internacional.</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check" style="color:var(--secondary-color);"></i></span>Gestión de rutas optimizadas.</li>
+            <div class="service-content" data-aos="fade-left" data-aos-duration="1000">
+                <h2>Transporte de Mercancías</h2>
+                <p>Como especialistas certificados (CNAE 4941), ofrecemos soluciones de
+                    transporte terrestre flexibles y seguras. Adaptamos nuestra flota al tipo de carga que su negocio
+                    necesita mover.</p>
+                <ul class="fa-ul check-list">
+                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Cargas completas (FTL) y grupajes
+                        (LTL).
+                    </li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Transporte Nacional e Internacional.
+                    </li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Gestión de rutas optimizadas.</li>
                 </ul>
             </div>
         </div>
 
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row-reverse; gap: 50px; align-items: center;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mudanzas" style="width: 100%; border-radius: 8px; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+        <div class="service-row reverse">
+            <div class="service-media" data-aos="fade-left" data-aos-duration="1000">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                     alt="Mudanzas Corporativas">
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <h2 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 20px;">Mudanzas Corporativas y Particulares</h2>
-                <p style="margin-bottom: 15px;">Sabemos que trasladarse es un proceso delicado. Nuestro equipo se encarga de todo el proceso para que usted solo tenga que preocuparse de llegar a su nuevo destino.</p>
-                <ul class="fa-ul" style="margin-left: 20px; line-height: 2;">
-                    <li><span class="fa-li"><i class="fa-solid fa-check" style="color:var(--secondary-color);"></i></span>Desmontaje y montaje de mobiliario.</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check" style="color:var(--secondary-color);"></i></span>Embalaje de seguridad.</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check" style="color:var(--secondary-color);"></i></span>Servicio puerta a puerta.</li>
+            <div class="service-content" data-aos="fade-right" data-aos-duration="1000">
+                <h2>Mudanzas Corporativas y Particulares</h2>
+                <p>Sabemos que trasladarse es un proceso delicado. Nuestro equipo se
+                    encarga de todo el proceso para que usted solo tenga que preocuparse de llegar a su nuevo
+                    destino.</p>
+                <ul class="fa-ul check-list">
+                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Desmontaje y montaje de mobiliario.
+                    </li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Embalaje de seguridad.</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Servicio puerta a puerta.</li>
                 </ul>
             </div>
         </div>
@@ -68,6 +93,7 @@
     <div class="container footer-grid">
         <div class="footer-info">
             <h3>Transportes Ansacar S.L.</h3>
+            <p>Soluciones logísticas integrales.</p>
         </div>
         <div class="footer-legal">
             <p><a href="legal.html">Aviso Legal</a> | <a href="contacto.html">Contacto</a></p>
@@ -75,5 +101,9 @@
         </div>
     </div>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

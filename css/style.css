@@ -70,6 +70,17 @@ body {
     text-transform: uppercase;
 }
 
+/* --- CORRECCIÓN AÑADIDA: FORZAR COLOR BLANCO EN ENLACE DEL LOGO --- */
+.logo a {
+    color: var(--white) !important;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+.logo a:hover {
+    opacity: 0.8;
+}
+/* ------------------------------------------------------------------ */
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -333,8 +344,9 @@ footer a:hover {
         margin: 0 auto;
     }
 
+    /* ESTO OCULTA EL MENÚ EN MÓVILES */
     .nav-links {
-        display: none; /* En producción real aquí iría un menú hamburguesa */
+        display: none;
     }
 }
 
@@ -361,4 +373,591 @@ footer a:hover {
 .nav-links a.active {
     border-bottom: 2px solid var(--secondary-color);
     color: var(--white);
+}
+
+/* Botón WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebc57;
+    color: white;
+}
+
+/* =========================================
+   7. ESTILOS ESPECÍFICOS: PÁGINA CONTACTO
+   ========================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.intro-text {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.info-details {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.icon {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    width: 35px;
+    margin-top: 5px;
+}
+
+.info-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #ddd;
+}
+
+/* Columna Derecha: El Formulario Principal */
+.main-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--primary-color);
+}
+
+.main-form h3 {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.main-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    transition: border 0.3s;
+}
+
+.main-form textarea:focus {
+    border-color: var(--primary-color);
+    background: var(--white);
+}
+
+/* =========================================
+   8. ESTILOS PÁGINA EMPRESA (LAYOUT DIVIDIDO)
+   ========================================= */
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.split-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.split-content p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 15px 15px 0px rgba(0, 51, 102, 0.1);
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-item {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.value-item i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   9. ESTILOS PÁGINAS DE TEXTO (LEGAL)
+   ========================================= */
+.text-page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.text-page-content h2 {
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.text-page-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.text-page-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.text-page-content li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+/* =========================================
+   10. AJUSTES RESPONSIVE ADICIONALES
+   ========================================= */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .main-form {
+        padding: 25px;
+    }
+
+    .split-section {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        height: 30vh;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .text-page-content {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   11. ESTILOS ESPECÍFICOS: PÁGINA SERVICIOS
+   ========================================= */
+
+/* Imagen de cabecera específica para Servicios */
+.services-hero {
+    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+}
+
+/* Contenedor de cada fila de servicio */
+.service-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 80px; /* Separación entre bloques */
+    align-items: center;
+}
+
+/* Modificador para invertir el orden (Texto - Imagen) */
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Columnas de Imagen y Texto */
+.service-media,
+.service-content {
+    flex: 1;
+    min-width: 300px; /* Para que no se aplaste en móvil */
+}
+
+/* Estilo de la Imagen */
+.service-media img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* La sombra que tenías */
+    transition: transform 0.3s ease;
+}
+
+.service-media img:hover {
+    transform: scale(1.02); /* Pequeño efecto zoom al pasar el ratón */
+}
+
+/* Estilo del Texto */
+.service-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Listas con iconos de check */
+.check-list {
+    margin-left: 20px;
+    line-height: 2; /* Espaciado entre líneas */
+}
+
+.check-list i {
+    color: var(--secondary-color); /* Icono rojo/naranja */
+}
+
+/* Ajuste para móviles en Servicios */
+@media (max-width: 768px) {
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column; /* Siempre imagen arriba en móvil */
+    }
+
+    .service-media, .service-content {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   12. ESTILOS ESPECÍFICOS: PÁGINA EMPRESA
+   ========================================= */
+
+/* Imagen de fondo específica para Empresa */
+.about-hero {
+    background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+}
+
+/* Contenedor del texto introductorio */
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-intro h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Espacio extra para el último párrafo antes de las tarjetas */
+.about-intro .last-p {
+    margin-bottom: 0; /* Quitamos margen inferior porque lo dará el grid */
+}
+
+/* Separación entre el texto y las tarjetas */
+.about-grid-margin {
+    margin-top: 60px;
+}
+
+/* Estilo para los iconos dentro de las tarjetas */
+.card-icon {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: inline-block; /* Asegura que el margin funcione bien */
+}
+
+/* Efecto hover en las tarjetas para que el icono también cambie */
+.card:hover .card-icon {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+/* =========================================
+   13. ESTILOS ESPECÍFICOS: AVISO LEGAL
+   ========================================= */
+
+/* Hero más pequeño y sobrio para páginas legales */
+.legal-hero {
+    height: 30vh; /* Menos altura que la portada principal */
+    min-height: 200px;
+    background-image: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Contenedor estilo "Papel/Documento" */
+.legal-paper {
+    max-width: 900px; /* Ancho de lectura óptimo */
+    margin: -100px auto 0; /* Margen negativo para que suba sobre el header (Efecto moderno) */
+    background: var(--white);
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10; /* Asegura que quede por encima del fondo */
+}
+
+/* Cabecera del documento */
+.legal-header {
+    border-bottom: 2px solid #eee;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.legal-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Cuerpo del texto */
+.legal-body h3 {
+    color: var(--primary-color);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-left: 4px solid var(--secondary-color); /* Detalle de diseño a la izquierda */
+    padding-left: 15px;
+}
+
+.legal-body p {
+    margin-bottom: 15px;
+    color: #444;
+    text-align: justify; /* Justificado para aspecto formal */
+    font-size: 1.05rem;
+}
+
+/* Lista de datos de empresa */
+.legal-list {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    margin: 20px 0;
+    list-style: none; /* Quitamos los puntos por defecto */
+}
+
+.legal-list li {
+    margin-bottom: 12px;
+    padding-left: 0;
+    font-size: 1rem;
+    color: #333;
+    display: flex; /* Para alinear si el texto es largo */
+    gap: 10px;
+}
+
+.legal-list strong {
+    color: var(--primary-color);
+    min-width: 140px; /* Alinea los datos verticalmente */
+}
+
+/* Ajustes Responsive para Legal */
+@media (max-width: 768px) {
+    .legal-paper {
+        padding: 30px 20px; /* Menos padding en móvil */
+        margin-top: 0; /* Quitamos el efecto de superposición en móvil */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .legal-list li {
+        flex-direction: column; /* Datos uno debajo de otro en móvil */
+        gap: 2px;
+    }
+}
+
+/* =========================================
+   14. MENÚ MÓVIL (HAMBURGUESA)
+   ========================================= */
+
+/* Por defecto (PC), el botón hamburguesa está oculto */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+/* Solo en pantallas móviles/tablets (< 900px) */
+@media (max-width: 900px) {
+
+    /* Mostrar el botón hamburguesa */
+    .hamburger {
+        display: block;
+        z-index: 1001; /* Asegurar que esté encima de todo */
+    }
+
+    /* El menú oculto por defecto */
+    .nav-links {
+        display: flex !important; /* Forzamos display flex */
+        position: fixed;
+        background-color: rgba(0, 30, 60, 0.98); /* Fondo azul muy oscuro casi opaco */
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        right: -100%; /* Lo escondemos a la derecha fuera de la pantalla */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s ease-in-out; /* Animación suave al entrar */
+        z-index: 1000;
+        gap: 40px; /* Separación entre enlaces */
+    }
+
+    /* Clase que añadiremos con JS para mostrar el menú */
+    .nav-links.active {
+        right: 0; /* Lo traemos a la pantalla */
+    }
+
+    /* Estilo de los enlaces en móvil */
+    .nav-links li a {
+        font-size: 1.5rem; /* Letra más grande para tocar con el dedo */
+        display: block;
+    }
+
+    /* Ocultar botón 'Contactar' estilo botón en el menú móvil para que se vea como texto */
+    .btn-pro {
+        border: none;
+        padding: 0;
+    }
+    .btn-pro:hover {
+        background: none;
+        color: var(--secondary-color) !important;
+    }
+}
+
+/* =========================================
+   16. BANNER DE COOKIES (RGPD)
+   ========================================= */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%; /* Oculto por defecto abajo */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 2000; /* Por encima de todo, incluso del menú móvil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: bottom 0.5s ease-in-out; /* Efecto deslizante suave */
+}
+
+.cookie-banner.show {
+    bottom: 0; /* Sube y se muestra */
+}
+
+.cookie-content {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que se adapte en móvil */
+}
+
+.cookie-text {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.cookie-text a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cookie-accept {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-cookie-accept:hover {
+    background: #002244;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .cookie-banner {
+        padding: 15px;
+    }
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
 }

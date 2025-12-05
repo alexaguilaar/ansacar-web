@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transportes Ansacar S.L. - Líderes en transporte de mercancías y mudanzas en Barcelona y Europa.">
+
+    <meta name="description"
+          content="Transportes Ansacar S.L. - Soluciones de logística terrestre, transporte de mercancías y mudanzas corporativas en Barcelona y toda Europa.">
+    <meta name="keywords" content="transporte, logistica, mudanzas, barcelona, esplugues, transporte terrestre">
+
     <title>Transportes Ansacar S.L. | Logística Global</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="header-pro">
     <div class="container nav-flex">
-        <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">TRANSPORTES ANSACAR</a></div>
+        <div class="logo">
+            <a href="index.html">TRANSPORTES ANSACAR</a>
+        </div>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links nav-menu">
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="empresa.html">Empresa</a></li>
-                <li><a href="contacto.html" class="btn-pro">Solicitar Presupuesto</a></li>
+                <li><a href="contacto.html" class="btn-pro">Contactar</a></li>
             </ul>
         </nav>
     </div>
@@ -29,9 +44,10 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content-grid">
 
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
             <h1>Logística sin fronteras.<br>Soluciones reales.</h1>
-            <p>Conectamos Esplugues con Europa. Más de una década garantizando la entrega de su mercancía con precisión y seguridad.</p>
+            <p>Conectamos Esplugues con Europa. Más de una década garantizando la entrega de su mercancía con precisión
+                y seguridad.</p>
 
             <div class="stats-row">
                 <div class="stat-item">
@@ -49,10 +65,11 @@
             </div>
         </div>
 
-        <div class="hero-card">
+        <div class="hero-card" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
             <h3><i class="fa-solid fa-paper-plane"></i> Cotización Rápida</h3>
             <p>Obtenga una estimación para su carga o mudanza en minutos.</p>
-            <form class="quick-form" action="#" onsubmit="alert('Gracias. Un agente contactará con usted pronto.'); return false;">
+
+            <form class="quick-form" action="contacto.html">
                 <div class="input-group">
                     <input type="text" placeholder="Origen (Ciudad o CP)" required>
                 </div>
@@ -78,6 +95,9 @@
         </div>
     </div>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
